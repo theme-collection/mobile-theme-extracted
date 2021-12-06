@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DAWalkThroughActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllMessages"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/da_spacing_large"
+        android:paddingBottom="@dimen/da_spacing_large"/>
+   <RelativeLayout
+       android:id="@+id/rlEmpty"
+       android:visibility="gone"
+       android:layout_centerInParent="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_180sdp"
+           android:layout_margin="@dimen/da_spacing_large"
+           android:src="@drawable/da_empty_msg"/>
+       <LinearLayout
+           android:layout_centerInParent="true"
+           android:orientation="vertical"
+           android:gravity="center_horizontal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="@dimen/da_spacing_standard_new">
+           <TextView
+               style="@style/DAHeading"
+               android:textSize="@dimen/da_font_size_xxlarge"
+               android:text="There is nobody here yet!" />
+
+           <TextView
+               style="@style/DASubHeading"
+               android:gravity="center"
+               android:layout_marginTop="@dimen/da_spacing_standard"
+               android:textSize="@dimen/da_font_size_medium"
+               android:layout_marginStart="@dimen/da_spacing_xlarge"
+               android:layout_marginEnd="@dimen/da_spacing_xlarge"
+               android:text="Get out there and find someone you'd like and start conversation!" />
+       </LinearLayout>
+
+   </RelativeLayout>
+</RelativeLayout>

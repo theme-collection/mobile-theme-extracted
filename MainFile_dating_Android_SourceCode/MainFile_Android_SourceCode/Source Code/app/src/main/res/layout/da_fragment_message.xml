@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DAWalkThroughActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/da_spacing_control">
+        <TextView
+            style="@style/DAHeading"
+            android:layout_centerVertical="true"
+            android:text="@string/da_messages" />
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/da_spacing_standard_new"
+            android:padding="@dimen/da_spacing_control"
+            android:tint="@color/da_textColorSecondary"
+            android:src="@drawable/da_ic_search_new"/>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabMessages"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/da_spacing_standard"
+        android:layout_marginStart="@dimen/da_spacing_large"
+        android:layout_marginEnd="@dimen/da_spacing_large"
+        android:layout_marginBottom="-1.5dp"
+        >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+        <TextView
+            android:id="@+id/tvAll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:foreground="?selectableItemBackground"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/da_spacing_xlarge"
+            android:paddingEnd="@dimen/da_spacing_xlarge"
+            android:paddingTop="@dimen/da_spacing_standard"
+            android:paddingBottom="@dimen/da_spacing_standard"
+            android:textSize="@dimen/da_font_size_xlarge"
+            android:textColor="@color/da_red"
+            android:textAppearance="@style/DAFontBold"
+            android:layout_marginEnd="@dimen/da_font_size_large"
+            android:text="@string/da_all" />
+
+        <TextView
+            android:id="@+id/tvMatches"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:foreground="?selectableItemBackground"
+            android:textSize="@dimen/da_font_size_xlarge"
+            android:paddingStart="@dimen/da_spacing_standard_new"
+            android:paddingEnd="@dimen/da_spacing_standard_new"
+            android:paddingTop="@dimen/da_spacing_standard"
+            android:paddingBottom="@dimen/da_spacing_standard"
+            android:textColor="@color/da_textColorSecondary"
+            android:textAppearance="@style/DAFontBold"
+            android:text="@string/da_matches" />
+
+        <View
+            android:id="@+id/tab"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_3sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvAll"
+            app:layout_constraintStart_toStartOf="@id/tvAll"
+            app:layout_constraintEnd_toEndOf="@id/tvAll"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="-1dp"
+            android:background="@color/da_red" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+     <FrameLayout
+         android:id="@+id/vpMessages"
+         android:overScrollMode="never"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+        />
+</LinearLayout>

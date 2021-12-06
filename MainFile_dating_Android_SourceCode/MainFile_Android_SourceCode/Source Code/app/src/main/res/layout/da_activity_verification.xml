@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/da_white"
+    android:fillViewport="true"
+    tools:context=".activity.DAWalkThroughActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="@style/DABackIcon" />
+
+        <TextView
+            style="@style/DAHeading"
+            android:layout_marginTop="@dimen/da_spacing_standard"
+            android:text="@string/da_veri_code" />
+
+        <TextView
+            style="@style/DASubHeading"
+            android:text="@string/da_code_note" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/da_spacing_xlarge"
+            android:layout_marginBottom="@dimen/da_spacing_xmedium"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edDigit1"
+                style="@style/OTPDigit">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edDigit2"
+                style="@style/OTPDigit" />
+
+            <EditText
+                android:id="@+id/edDigit3"
+                style="@style/OTPDigit" />
+
+            <EditText
+                android:id="@+id/edDigit4"
+                style="@style/OTPDigit" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/da_not_rcv_sms"
+            android:textColor="@color/da_textColorPrimary"
+            android:textSize="@dimen/da_font_size_normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnVerify"
+                style="@style/DAMaterialButtonStyle.Enabled"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/da_spacing_large"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/da_spacing_large"
+                android:layout_marginBottom="@dimen/da_spacing_xlarge"
+                android:text="@string/da_next"
+                android:textAllCaps="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

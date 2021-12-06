@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/da_spacing_large"
+    android:paddingEnd="@dimen/da_spacing_large"
+    android:paddingTop="@dimen/_14sdp"
+  >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="@dimen/da_spacing_control_half">
+        <ImageView
+            android:id="@+id/ivFlag"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/flag_india"/>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_toEndOf="@id/cardImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/da_spacing_middle"
+        android:textSize="@dimen/da_font_size_normal"
+        android:textColor="@color/da_textColorPrimary"
+        android:text="@string/hindi"
+        />
+    <ImageView
+        android:id="@+id/ivSelected"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:padding="@dimen/_3sdp"
+        android:tint="@color/da_red"
+        android:src="@drawable/da_ic_checkmark"/>
+
+    <View
+        android:layout_below="@id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_height="0.5dp"
+        android:background="@color/da_view_color"/>
+</RelativeLayout>

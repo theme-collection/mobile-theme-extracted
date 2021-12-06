@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-7.0.2-bin/gradle-7.0.2" />
+        <option name="modules">
+          <set>
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus-2.0.2/android" />
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.8/android" />
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/nb_utils-4.4.10/android" />
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.6/android" />
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.8/android" />
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.0+4/android" />
+            <option value="$USER_HOME$/Android/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.12/android" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

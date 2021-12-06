@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/da_call_bg"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_60sdp">
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/DAHeading"
+            android:textColor="@color/da_white"
+            android:text="@string/da_tiffany" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/da_spacing_large"
+            android:layout_marginEnd="@dimen/da_spacing_large"
+            android:textAppearance="@style/DAFontSemiBold"
+            android:layout_below="@id/tvName"
+            android:textSize="@dimen/da_font_size_medium"
+            android:textColor="@color/da_white"
+            android:text="@string/da_calling" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlKeys"
+        android:visibility="invisible"
+        android:layout_above="@id/llButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/da_spacing_standard_new">
+
+        <ImageView
+            android:id="@+id/ivRecord"
+            android:src="@drawable/da_ic_microphone"
+            style="@style/DACallButton" />
+
+        <ImageView
+            android:id="@+id/ivDial"
+            android:layout_toEndOf="@id/ivRecord"
+            android:src="@drawable/da_ic_dial"
+            style="@style/DACallButton" />
+
+        <ImageView
+            android:id="@+id/ivSpeaker"
+            android:layout_toEndOf="@id/ivDial"
+            android:src="@drawable/da_ic_speaker_filled_audio_tool"
+            style="@style/DACallButton" />
+
+        <ImageView
+            android:id="@+id/ivBluetooth"
+            android:layout_below="@id/ivRecord"
+            android:src="@drawable/da_ic_bluetooth"
+            style="@style/DACallButton" />
+
+        <ImageView
+            android:id="@+id/ivContact"
+            android:layout_toEndOf="@id/ivBluetooth"
+            android:layout_below="@id/ivRecord"
+            android:src="@drawable/da_ic_man_user"
+            style="@style/DACallButton" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_below="@id/ivRecord"
+            android:layout_toEndOf="@id/ivContact"
+            android:src="@drawable/da_ic_more_vert"
+            style="@style/DACallButton" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+        <ImageView
+            android:id="@+id/ivHangup"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/da_spacing_xlarge"
+            android:tint="@color/da_white"
+            android:padding="@dimen/_14sdp"
+            android:background="@drawable/da_bg_circle"
+            android:backgroundTint="@color/da_red_dark"
+            android:rotation="135"
+            android:src="@drawable/da_ic_call" />
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/da_spacing_xlarge"
+            android:tint="@color/da_white"
+            android:padding="@dimen/_14sdp"
+            android:background="@drawable/da_bg_circle"
+            android:backgroundTint="@color/da_red_green"
+            android:rotation="135"
+            android:src="@drawable/da_ic_call" />
+
+    </LinearLayout>
+
+</RelativeLayout>

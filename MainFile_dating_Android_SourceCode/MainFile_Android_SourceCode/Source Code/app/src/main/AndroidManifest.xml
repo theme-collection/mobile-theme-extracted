@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iqonic.datingapp">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.DAUserDetailActivity"
+            android:label="@string/title_activity_dauser_detail"
+            android:theme="@style/DAAppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DANotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme"/>
+        <activity
+            android:name=".activity.DAMakeAppointmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme"/>
+        <activity
+            android:name=".activity.DAChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme"/>
+
+        <activity
+            android:name=".activity.DASplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DASignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DACongratulationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+
+        <activity
+            android:name=".activity.DAViewProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+
+        <activity
+            android:name=".activity.DAProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DACallingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DACameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+
+        <activity
+            android:name=".activity.DAVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAWalkThroughActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DASecurityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAEmailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DALanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DANewPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DADashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DASearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+        <activity
+            android:name=".activity.DAEditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DAAppTheme" />
+    </application>
+
+</manifest>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.iqonic.datingapp.utils.DASwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:da_left_swipe_enabled="false"
+        app:da_right_swipe_enabled="true"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/da_spacing_standard">
+
+        <!--CENTER. app:gravity="center" - is default value -->
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/da_spacing_large"
+            android:paddingEnd="@dimen/da_spacing_large">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.iqonic.datingapp.utils.DACircleImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/da_profile2"
+                    android:layout_marginStart="@dimen/da_spacing_control" />
+
+                <View
+                    android:id="@+id/viewStatus"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/da_bg_circle_dot" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/da_spacing_standard_new"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/da_textColorPrimary"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/DAFontMedium"
+                    android:textSize="@dimen/da_font_size_normal"
+                    android:text="@string/da_william" />
+
+                <TextView
+                    android:id="@+id/tvChatMessage"
+                    android:layout_below="@id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_spacing_control"
+                    android:textColor="@color/da_textColorSecondary"
+                    android:textSize="@dimen/da_font_size_medium"
+                    tools:text="Hi Hannah ,Good morning!" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_spacing_control"
+                    android:textColor="@color/da_textColorSecondary"
+                    android:textSize="@dimen/da_font_size_medium"
+                    android:layout_marginStart="@dimen/da_spacing_standard_new"
+                    tools:text="Just now" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--RIGHT-->
+        <FrameLayout
+            android:id="@+id/buttonRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:da_swipe_gravity="right"
+            app:da_bring_to_clamp="@dimen/_50sdp"
+            app:da_clamp="self"
+            android:paddingStart="@dimen/da_spacing_large"
+            android:paddingEnd="@dimen/da_spacing_large"
+            android:paddingTop="@dimen/da_spacing_middle"
+            android:paddingBottom="@dimen/da_spacing_middle"
+            app:da_sticky="@dimen/_30sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/da_spacing_control"
+                android:tint="@color/da_red_dark"
+                android:src="@drawable/da_ic_delete_black_24dp" />
+
+
+        </FrameLayout>
+
+    </com.iqonic.datingapp.utils.DASwipeLayout>
+    <View
+        android:layout_gravity="bottom"
+        style="@style/Divider"
+        android:layout_marginEnd="@dimen/da_spacing_large"
+        android:layout_marginStart="@dimen/_92sdp"/>
+
+</FrameLayout>
+

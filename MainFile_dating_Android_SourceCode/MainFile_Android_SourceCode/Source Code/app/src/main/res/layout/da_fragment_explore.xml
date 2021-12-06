@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DAWalkThroughActivity">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/da_bg_bottom_shadow"
+       >
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/tabExplore"
+           android:layout_width="wrap_content"
+           android:layout_height="?attr/actionBarSize"
+           android:layout_marginTop="@dimen/da_spacing_standard"
+           android:layout_marginStart="@dimen/da_spacing_xlarge"
+           android:layout_marginBottom="-1.5dp"
+           >
+           <TextView
+               android:id="@+id/tvNearly"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center_vertical"
+               android:textStyle="bold"
+               android:padding="@dimen/da_spacing_standard"
+               android:textSize="@dimen/da_font_size_xlarge"
+               android:textColor="@color/da_red"
+               android:textAppearance="@style/DAFontBold"
+               android:layout_marginEnd="@dimen/da_font_size_large"
+               android:text="@string/da_nearly" />
+
+           <TextView
+               android:id="@+id/tvList"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toEndOf="@id/tvNearly"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center_vertical"
+               android:textStyle="bold"
+               android:layout_marginStart="@dimen/da_spacing_large"
+               android:textSize="@dimen/da_font_size_xlarge"
+               android:padding="@dimen/da_spacing_standard"
+               android:textColor="@color/da_textColorSecondary"
+               android:textAppearance="@style/DAFontBold"
+               android:layout_marginEnd="@dimen/da_font_size_large"
+               android:text="@string/da_list" />
+
+           <View
+               android:id="@+id/tab"
+               android:layout_width="0dp"
+               android:layout_height="@dimen/_3sdp"
+               app:layout_constraintTop_toBottomOf="@id/tvNearly"
+               app:layout_constraintStart_toStartOf="@id/tvNearly"
+               app:layout_constraintEnd_toEndOf="@id/tvNearly"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginBottom="-1dp"
+               android:background="@color/da_red" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+      <ImageView
+          android:id="@+id/ivFilter"
+          android:layout_width="@dimen/_30sdp"
+          android:layout_height="@dimen/_30sdp"
+          android:src="@drawable/da_ic_filter"
+          android:layout_alignParentEnd="true"
+          android:layout_marginEnd="@dimen/da_spacing_standard_new"
+          android:layout_centerVertical="true"
+          android:padding="@dimen/da_spacing_control"
+          android:tint="@color/da_textColorThird"
+          />
+   </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
